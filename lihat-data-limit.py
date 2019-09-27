@@ -1,4 +1,4 @@
-#Scrip Melihat database database
+#Membuat Tabel
 import mysql.connector
 
 konek = mysql.connector.connect(
@@ -6,10 +6,12 @@ konek = mysql.connector.connect(
 	port = "3307",
 	user = "root",
 	password = "640078Talu",
+	database = "db_python",
 	)
 
 my_cursor = konek.cursor()
-my_cursor.execute("SHOW DATABASES")
+my_cursor.execute("SELECT * FROM users WHERE age < 30")
 
-for db in my_cursor:
-	print(db)
+result = my_cursor.fetchall()
+for data in result:
+	print(data[0])
