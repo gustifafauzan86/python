@@ -1,5 +1,3 @@
-
-#Fauzan
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -23,8 +21,6 @@ my_cursor = mydb.cursor()
 my_cursor.execute("SHOW TABLES")
 for table in my_cursor:
 	print(table[0])
-
-
 
 # sqlStuff = "INSERT INTO users (name, email, age) VALUES (%s, %s, %s)"
 # record1 = ("Fauzan", "fauzan@gmail.com", 40)
