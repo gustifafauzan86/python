@@ -12,4 +12,4 @@ my_cursor = konek.cursor()
 my_cursor.execute("SHOW DATABASES")
 
 for db in my_cursor:
-	print(db[0])
+	print(db)
